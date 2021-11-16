@@ -3,7 +3,7 @@
 ======================*/
 
 body{
-    background-color: hsl(226, 63%, 50%);
+    background-color: hsl(0, 0%, 96%);
     display:flex; 
     flex-direction:column;    
     margin: 1em auto;
@@ -13,8 +13,9 @@ body{
 
 header{
     display: flex;
-    height: 10vh;
+    height: 9vh;
     justify-content: space-between;
+    background-color: hsl(0, 92%, 35%);
 }
 
 main{
@@ -40,7 +41,7 @@ footer{
 ======================*/
 
 h1, h2, h3, h4, h5, h6, a, p{
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 0%);
 }
 
 h1, h2, h3, h4, a, td, p, button {
@@ -55,6 +56,7 @@ h1 {
     font-size: 2.5em;
     font-weight: 600;
     text-decoration: none;
+    margin-top: 0.4em;
 }
 
 h2 {
@@ -84,12 +86,68 @@ a:focus, a:hover {
 }
 
 /*====================
+=========Menu=========
+======================*/
+
+ul { 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:hsl(0, 92%, 35%);
+    line-height: 3.3em;
+}
+
+li {
+    float: left
+}
+
+li a {
+    display: block;
+    color:hsl(0, 0%, 0%);
+    text-align: center;
+    padding: 1em 1.2em;
+    text-decoration: none
+    
+}
+
+li a:hover:not(.active){ 
+    background-color: hsl(0, 80%, 24%);
+}
+
+.active { 
+    background-color: hsl(0, 0%, 96%);    
+}
+
+
+/*====================
+========Banner========
+======================*/
+
+
+
+html, main { 
+    height: 100%;
+    margin: 0;
+    padding: 0 auto;
+}
+
+main img{ 
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%
+}
+
+
+/*====================
 =========Table========
 ======================*/
 
 table { 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:hsl(0, 0%, 100%);
+    color:hsl(0, 0%, 0%);
     border-collapse: collapse;
     width: 100%;
 }
@@ -120,12 +178,12 @@ tr:nth-child(even){
 }
 
 .logo svg{
-    height: 3em;
-    width: 3em;
+    height: 5em;
+    width: 5em;
 }
 
 .logo svg path{
-    fill:hsl(41, 98%, 60%);
+    fill:hsl(0, 0%, 100%)
 }
 
 /*====================
@@ -142,11 +200,11 @@ tr:nth-child(even){
 }
 
 .menu svg path{
-    fill:hsl(41, 98%, 60%);
+    fill: hsl(0, 92%, 35%);
 }
    
 .menu:hover svg path {
-    fill: hsl(226, 63%, 25%);
+    fill: hsl(0, 80%, 24%);
 }
 
 /*====================
@@ -285,14 +343,6 @@ tr:nth-child(even){
 	text-decoration: none;
 }
 
-.crud__store-button:hover{
-    background-size: 100% auto;
-}
-
-.crud__store-button:focus {
-	outline: 0;
-}
-
 .footer-element{
     width: 100%;
 }
@@ -302,153 +352,11 @@ tr:nth-child(even){
 }
 
 .author p:hover{
-    color: hsl(41, 98%, 60%);
+    color:hsl(0, 92%, 35%)
 }
 
 
-
-@media (max-width:479px) {
-
-    header{
-        height: 2vh;
-    }
-
-    .main-element{
-        margin: 1.5em 0;
-    }
-
-    .footer-element{
-        margin: 1em 0;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-    
-    h2 {
-        font-size: 1.5em;
-    }
-
-    .logo svg{
-        height: 2em;
-        width: 2em;
-    }
-
-    .title{
-        margin-left: 0.5em;
-    }
-
-    .crud{
-        display: block;
-    }
-
-    .crud__table, .crud__form{
-        min-width: 100%;
-        max-width: 100%;
-    }
-
-    .crud__table-grid{
-        grid-gap: 0;
-    }
-
-    .crud__table-flex{
-        gap: 0;
-    }
-
-    .crud__store-button{
-        font-size: 1em;
-        margin-top: 0.5em;
-    }
-}
-
-@media (max-width:1024px) {
-
-    header{
-        height: 2vh;
-    }
-
-    .main-element{
-        margin: 1.5em 0;
-    }
-
-    .footer-element{
-        margin: 1em 0;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-    
-    h2 {
-        font-size: 1.5em;
-    }
-
-    .logo svg{
-        height: 2em;
-        width: 2em;
-    }
-
-    .title{
-        margin-left: 0.5em;
-    }
-
-    .crud{
-        display: block;
-    }
-
-    .crud__table, .crud__form{
-        min-width: 100%;
-        max-width: 100%;
-    }
-
-    .crud__table-grid{
-        grid-gap: 0;
-    }
-
-    .crud__table-flex{
-        gap: 0;
-    }
-
-    .crud__store-button{
-        font-size: 1em;
-        margin-top: 0.5em;
-    }
-}
-
-@media (min-width: 1920px) {
-
-    h1 {
-        font-size: 3.5em;
-    }
-    
-    h2 {
-        font-size: 3em;
-    }
-
-    .logo svg{
-        height: 4em;
-        width: 4em;
-    }
-
-    .crud__form-label label{
-        font-size: 2em;
-    }
-
-    .crud__form-input input, 
-    .crud__form-input textarea,
-    .crud__form-input select {
-        font-size: 1.5em;
-        padding: 0.3em;
-    }
-
-    .crud__store-button{
-        font-size: 1.5em;
-    }
-
-    .footer-element p{
-        font-size: 1.5em;
-    }
-}
-
-
-
+/*@media screen and (max-width:470px) {
+    ul li,
+    ul li {float:none}
+}*/
